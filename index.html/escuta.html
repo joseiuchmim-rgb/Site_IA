@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de Escuta - Espaço de acolhimento e desabafo simulado">
+  <title>Portal de Escuta | Portal de Apoio ao Estudante</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <i class="fas fa-hands-helping"></i>
+        <span>Portal de Apoio</span>
+      </div>
+      <div class="controls">
+        <button class="control-btn" id="fontBtn" title="Aumentar fonte"><i class="fas fa-text-height"></i></button>
+        <button class="control-btn" id="contrastBtn" title="Alto contraste"><i class="fas fa-adjust"></i></button>
+        <button class="control-btn" id="darkModeBtn" title="Modo escuro"><i class="fas fa-moon"></i></button>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+        <li><a href="escuta.html" class="active"><i class="fas fa-comments"></i> Portal de Escuta</a></li>
+        <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+        <li><a href="referencias.html"><i class="fas fa-book"></i> Referências</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="section-title" style="margin-bottom:0.5rem;">Portal de Escuta</h1>
+    <p style="text-align:center;color:var(--text-light);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;">
+      Este é um espaço seguro e acolhedor. Você pode escrever o que está sentindo. 
+      <strong>Nenhuma informação é armazenada</strong> — é apenas uma simulação para te ajudar a refletir e receber uma mensagem de apoio.
+    </p>
+
+    <div class="escuta-container">
+      <!-- Formulário -->
+      <div class="form-card">
+        <h2><i class="fas fa-pen-fancy"></i> Escreva seu desabafo</h2>
+        <form id="formEscuta">
+          <div class="form-group">
+            <label for="nome">Seu nome ou apelido (opcional)</label>
+            <input type="text" id="nome" placeholder="Como você gostaria de ser chamado(a)?">
+          </div>
+          <div class="form-group">
+            <label for="desabafo">O que você gostaria de compartilhar?</label>
+            <textarea id="desabafo" placeholder="Escreva aqui o que está sentindo, sem medo. Este espaço é só seu..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <i class="fas fa-paper-plane"></i> Enviar desabafo
+          </button>
+        </form>
+
+        <div class="resposta-auto" id="respostaAuto">
+          <h3><i class="fas fa-heart"></i> Mensagem de acolhimento</h3>
+          <p id="msgAcolhimento"></p>
+        </div>
+      </div>
+
+      <!-- Frases motivacionais -->
+      <div class="msg-card">
+        <h2><i class="fas fa-quote-left"></i> Frases de força</h2>
+        <div class="frases">
+          <div class="frase">
+            "Você é mais forte do que imagina. Pedir ajuda é um ato de coragem."
+          </div>
+          <div class="frase">
+            "Não há vergonha em sentir dor. Há valor em buscar apoio."
+          </div>
+          <div class="frase">
+            "Sua voz importa. O que você sente é real e merece atenção."
+          </div>
+          <div class="frase">
+            "Um dia de cada vez. Você não precisa enfrentar tudo sozinho(a)."
+          </div>
+          <div class="frase">
+            "A empatia começa quando escolhemos ouvir e acolher."
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orientações -->
+    <section class="orientacoes">
+      <h2><i class="fas fa-map-signs"></i> Para onde procurar ajuda?</h2>
+      <p style="color:var(--text-light);margin-bottom:0.5rem;">
+        Quando precisar de apoio real, converse com alguém de confiança. Aqui estão algumas opções:
+      </p>
+      <div class="orientacoes-grid">
+        <div class="orientacao-item">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <h4>Professor(a)</h4>
+          <p>Alguém que te conhece e pode orientar no ambiente escolar.</p>
+        </div>
+        <div class="orientacao-item">
+          <i class="fas fa-user-graduate"></i>
+          <h4>Pedagogo(a)</h4>
+          <p>Profissional preparado para acolher e mediar situações.</p>
+        </div>
+        <div class="orientacao-item">
+          <i class="fas fa-building"></i>
+          <h4>Direção da escola</h4>
+          <p>Pode tomar medidas e garantir sua segurança no colégio.</p>
+        </div>
+        <div class="orientacao-item">
+          <i class="fas fa-home"></i>
+          <h4>Familiares</h4>
+          <p>Pais, responsáveis ou parentes de confiança.</p>
+        </div>
+        <div class="orientacao-item">
+          <i class="fas fa-user-friends"></i>
+          <h4>Adulto de confiança</h4>
+          <p>Qualquer pessoa adulta em quem você confia de verdade.</p>
+        </div>
+        <div class="orientacao-item">
+          <i class="fas fa-phone-alt"></i>
+          <h4>CVV — 188</h4>
+          <p>Centro de Valorização da Vida. Ligação gratuita, 24h.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="info-box" style="margin-top:2rem;border-left-color:var(--accent);">
+      <h2><i class="fas fa-info-circle"></i> Importante</h2>
+      <p>
+        Este formulário é apenas uma <strong>simulação educativa</strong>. Nenhuma mensagem é enviada ou armazenada. 
+        Se você está passando por uma situação real de sofrimento, procure imediatamente um adulto de confiança ou ligue para o CVV: <strong>188</strong>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p class="school-name">Colégio Estadual Visconde de Guarapuava</p>
+    <p>Portal de Apoio ao Estudante — Projeto escolar sobre combate ao bullying</p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;opacity:0.7;">Este site é educativo e não substitui atendimento profissional.</p>
+  </footer>
+
+  <button id="backToTop" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

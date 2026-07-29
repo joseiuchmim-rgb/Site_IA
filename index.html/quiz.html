@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiz interativo sobre bullying e respeito">
+  <title>Quiz Interativo | Portal de Apoio ao Estudante</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <i class="fas fa-hands-helping"></i>
+        <span>Portal de Apoio</span>
+      </div>
+      <div class="controls">
+        <button class="control-btn" id="fontBtn" title="Aumentar fonte"><i class="fas fa-text-height"></i></button>
+        <button class="control-btn" id="contrastBtn" title="Alto contraste"><i class="fas fa-adjust"></i></button>
+        <button class="control-btn" id="darkModeBtn" title="Modo escuro"><i class="fas fa-moon"></i></button>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+        <li><a href="escuta.html"><i class="fas fa-comments"></i> Portal de Escuta</a></li>
+        <li><a href="quiz.html" class="active"><i class="fas fa-question-circle"></i> Quiz</a></li>
+        <li><a href="referencias.html"><i class="fas fa-book"></i> Referências</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="section-title">Quiz Interativo</h1>
+    <p style="text-align:center;color:var(--text-light);margin-bottom:2rem;max-width:550px;margin-left:auto;margin-right:auto;">
+      Responda 5 perguntas sobre bullying, respeito e como agir em situações do cotidiano escolar. 
+      Ao final, veja quantas você acertou!
+    </p>
+
+    <div class="quiz-container" id="quizContainer">
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="quiz-question active" id="quizQuestion">
+        <!-- Preenchido via JavaScript -->
+      </div>
+
+      <div class="quiz-resultado" id="quizResultado">
+        <div class="score-circle">
+          <span class="numero"><span id="scoreNum">0</span>/<span id="scoreTotal">5</span></span>
+          <span class="label">acertos</span>
+        </div>
+        <p class="feedback" id="feedbackText"></p>
+        <p style="color:var(--text-light);margin-bottom:1.5rem;">
+          Continue praticando o respeito e a empatia todos os dias. Você pode fazer a diferença!
+        </p>
+      </div>
+
+      <div class="quiz-nav">
+        <div></div>
+        <button class="btn btn-primary" id="btnNext" style="display:none;">
+          Próxima <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="btn btn-secondary" id="btnRestart" style="display:none;">
+          <i class="fas fa-redo"></i> Refazer quiz
+        </button>
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top:2.5rem;text-align:center;">
+      <h2><i class="fas fa-lightbulb"></i> Dica</h2>
+      <p>
+        O bullying só perde força quando todos se posicionam contra ele. 
+        Seja um(a) aliado(a) da empatia e do respeito no Colégio Estadual Visconde de Guarapuava!
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p class="school-name">Colégio Estadual Visconde de Guarapuava</p>
+    <p>Portal de Apoio ao Estudante — Projeto escolar sobre combate ao bullying</p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;opacity:0.7;">Este site é educativo e não substitui atendimento profissional.</p>
+  </footer>
+
+  <button id="backToTop" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

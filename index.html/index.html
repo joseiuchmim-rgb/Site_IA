@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de Apoio ao Estudante - Combate ao Bullying no Colégio Estadual Visconde de Guarapuava">
+  <title>Portal de Apoio ao Estudante | Combate ao Bullying</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <i class="fas fa-hands-helping"></i>
+        <span>Portal de Apoio</span>
+      </div>
+      <div class="controls">
+        <button class="control-btn" id="fontBtn" title="Aumentar fonte"><i class="fas fa-text-height"></i></button>
+        <button class="control-btn" id="contrastBtn" title="Alto contraste"><i class="fas fa-adjust"></i></button>
+        <button class="control-btn" id="darkModeBtn" title="Modo escuro"><i class="fas fa-moon"></i></button>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Início</a></li>
+        <li><a href="escuta.html"><i class="fas fa-comments"></i> Portal de Escuta</a></li>
+        <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+        <li><a href="referencias.html"><i class="fas fa-book"></i> Referências</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-image">
+        <div style="position:relative;z-index:1;text-align:center;color:white;padding:1rem;">
+          <i class="fas fa-shield-alt" style="font-size:3.5rem;margin-bottom:0.5rem;opacity:0.9;"></i>
+          <p style="font-size:1.1rem;font-weight:600;opacity:0.95;">Respeito • Empatia • Acolhimento</p>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1>Portal de Apoio ao Estudante</h1>
+        <p class="school">Colégio Estadual Visconde de Guarapuava</p>
+        <p class="welcome">
+          Bem-vindo ao Portal de Apoio ao Estudante. Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente escolar. 
+          Nosso objetivo é incentivar o respeito, a empatia e o acolhimento, mostrando que você nunca está sozinho(a).
+        </p>
+        <a href="escuta.html" class="btn btn-primary"><i class="fas fa-heart"></i> Preciso de ajuda</a>
+        <a href="quiz.html" class="btn btn-outline" style="margin-left:0.5rem;"><i class="fas fa-lightbulb"></i> Fazer o Quiz</a>
+      </div>
+    </section>
+
+    <!-- Carousel -->
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <div>
+            <i class="fas fa-users" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
+            O bullying não é brincadeira.<br>É violência que precisa ser combatida.
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div>
+            <i class="fas fa-hand-holding-heart" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
+            Empatia transforma vidas.<br>Seja a diferença na sua escola.
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div>
+            <i class="fas fa-comment-dots" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
+            Falar é o primeiro passo.<br>Procure alguém de confiança.
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <div>
+            <i class="fas fa-star" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
+            Você é importante.<br>Sua voz merece ser ouvida.
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- O que é bullying -->
+    <h2 class="section-title">O que é Bullying?</h2>
+    <div class="info-box">
+      <p>
+        Bullying é um comportamento agressivo, intencional e repetido, que ocorre em uma relação de desequilíbrio de poder. 
+        Pode ser físico, verbal, psicológico ou virtual (cyberbullying). Não é uma simples brincadeira: causa sofrimento real 
+        e pode deixar marcas profundas na vida de quem sofre.
+      </p>
+      <ul>
+        <li><strong>Físico:</strong> empurrões, socos, chutes, destruição de pertences.</li>
+        <li><strong>Verbal:</strong> xingamentos, apelidos pejorativos, humilhações.</li>
+        <li><strong>Psicológico:</strong> exclusão, intimidação, espalhar boatos.</li>
+        <li><strong>Cyberbullying:</strong> agressões por meio de redes sociais, mensagens e internet.</li>
+      </ul>
+    </div>
+
+    <!-- Cards de ações -->
+    <h2 class="section-title">Como podemos ajudar?</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon"><i class="fas fa-ear"></i></div>
+        <h3>Portal de Escuta</h3>
+        <p>Um espaço seguro para desabafar (de forma simulada). Você receberá uma mensagem de acolhimento e orientações de ajuda.</p>
+        <a href="escuta.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.9rem;">Acessar</a>
+      </article>
+      <article class="card">
+        <div class="card-icon"><i class="fas fa-brain"></i></div>
+        <h3>Quiz Interativo</h3>
+        <p>Teste seus conhecimentos sobre bullying, respeito e como agir em situações do dia a dia escolar. Aprenda de forma divertida!</p>
+        <a href="quiz.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.9rem;">Começar</a>
+      </article>
+      <article class="card">
+        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Fontes Confiáveis</h3>
+        <p>Conheça as referências e instituições que apoiam o combate ao bullying e a promoção de um ambiente escolar saudável.</p>
+        <a href="referencias.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.9rem;">Ver fontes</a>
+      </article>
+    </div>
+
+    <!-- Mensagem final -->
+    <div class="info-box" style="border-left-color: var(--secondary); text-align:center;">
+      <h2><i class="fas fa-heart" style="color:var(--secondary);"></i> Você não está sozinho(a)</h2>
+      <p style="margin-top:0.8rem;">
+        Se você está sofrendo bullying ou conhece alguém que está, procure ajuda. 
+        Converse com um professor, pedagogo, direção da escola, familiares ou outro adulto de confiança. 
+        Existem pessoas preparadas para te acolher e ajudar.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p class="school-name">Colégio Estadual Visconde de Guarapuava</p>
+    <p>Portal de Apoio ao Estudante — Projeto escolar sobre combate ao bullying</p>
+    <p style="margin-top:0.5rem;font-size:0.8rem;opacity:0.7;">Este site é educativo e não substitui atendimento profissional.</p>
+  </footer>
+
+  <button id="backToTop" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
