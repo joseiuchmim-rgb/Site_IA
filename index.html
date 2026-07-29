@@ -3,150 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portal de Apoio ao Estudante - Combate ao Bullying no Colégio Estadual Visconde de Guarapuava">
-  <title>Portal de Apoio ao Estudante | Combate ao Bullying</title>
+  <meta name="description" content="Portal de Apoio ao Estudante – informações, acolhimento e orientações sobre bullying, respeito e convivência escolar.">
+  <title>Portal de Apoio ao Estudante</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <div class="logo">
-        <i class="fas fa-hands-helping"></i>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-hands-holding-heart"></i>
         <span>Portal de Apoio</span>
-      </div>
-      <div class="controls">
-        <button class="control-btn" id="fontBtn" title="Aumentar fonte"><i class="fas fa-text-height"></i></button>
-        <button class="control-btn" id="contrastBtn" title="Alto contraste"><i class="fas fa-adjust"></i></button>
-        <button class="control-btn" id="darkModeBtn" title="Modo escuro"><i class="fas fa-moon"></i></button>
-        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="escuta.html">Portal de Escuta</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="referencias.html">Referências</a></li>
+        </ul>
+      </nav>
+      <div class="a11y-controls">
+        <button class="a11y-btn" id="themeBtn" onclick="cycleTheme()" title="Alternar tema"><i class="fa-solid fa-moon"></i></button>
+        <button class="a11y-btn" onclick="changeFontSize(2)" title="Aumentar fonte"><i class="fa-solid fa-a"></i>+</button>
+        <button class="a11y-btn" onclick="changeFontSize(-2)" title="Diminuir fonte"><i class="fa-solid fa-a"></i>−</button>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Início</a></li>
-        <li><a href="escuta.html"><i class="fas fa-comments"></i> Portal de Escuta</a></li>
-        <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
-        <li><a href="referencias.html"><i class="fas fa-book"></i> Referências</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
-      <div class="hero-image">
-        <div style="position:relative;z-index:1;text-align:center;color:white;padding:1rem;">
-          <i class="fas fa-shield-alt" style="font-size:3.5rem;margin-bottom:0.5rem;opacity:0.9;"></i>
-          <p style="font-size:1.1rem;font-weight:600;opacity:0.95;">Respeito • Empatia • Acolhimento</p>
-        </div>
-      </div>
       <div class="hero-content">
         <h1>Portal de Apoio ao Estudante</h1>
-        <p class="school">Colégio Estadual Visconde de Guarapuava</p>
         <p class="welcome">
-          Bem-vindo ao Portal de Apoio ao Estudante. Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente escolar. 
-          Nosso objetivo é incentivar o respeito, a empatia e o acolhimento, mostrando que você nunca está sozinho(a).
+          Bem-vindo(a)! Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente escolar.
+          Este espaço foi criado para incentivar o <strong>respeito</strong>, a <strong>empatia</strong> e o <strong>acolhimento</strong>.
         </p>
-        <a href="escuta.html" class="btn btn-primary"><i class="fas fa-heart"></i> Preciso de ajuda</a>
-        <a href="quiz.html" class="btn btn-outline" style="margin-left:0.5rem;"><i class="fas fa-lightbulb"></i> Fazer o Quiz</a>
+        <p style="margin-bottom: 1.5rem; color: var(--text-muted);">
+          Você não está sozinho(a). Sempre existem pessoas e instituições preparadas para ajudar.
+        </p>
+        <a href="escuta.html" class="btn btn-primary">
+          <i class="fa-solid fa-comments"></i> Ir para o Portal de Escuta
+        </a>
+        <a href="quiz.html" class="btn btn-outline" style="margin-left: 0.75rem;">
+          <i class="fa-solid fa-question-circle"></i> Fazer o Quiz
+        </a>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80" alt="Jovens estudantes juntos em ambiente acolhedor">
       </div>
     </section>
 
-    <!-- Carousel -->
-    <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <div>
-            <i class="fas fa-users" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
-            O bullying não é brincadeira.<br>É violência que precisa ser combatida.
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div>
-            <i class="fas fa-hand-holding-heart" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
-            Empatia transforma vidas.<br>Seja a diferença na sua escola.
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div>
-            <i class="fas fa-comment-dots" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
-            Falar é o primeiro passo.<br>Procure alguém de confiança.
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div>
-            <i class="fas fa-star" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>
-            Você é importante.<br>Sua voz merece ser ouvida.
-          </div>
-        </div>
+    <section>
+      <h2 class="section-title">O que você encontra aqui</h2>
+      <p class="section-subtitle">Um espaço seguro de informação e acolhimento</p>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-ear-listen"></i></div>
+          <h3>Portal de Escuta</h3>
+          <p>Um espaço para desabafar de forma segura (simulação) e receber orientações de acolhimento.</p>
+          <a href="escuta.html" style="margin-top: 0.75rem; display: inline-block; font-weight: 600;">Acessar →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>Quiz Interativo</h3>
+          <p>Teste seus conhecimentos sobre bullying, respeito, segurança online e como agir em situações difíceis.</p>
+          <a href="quiz.html" style="margin-top: 0.75rem; display: inline-block; font-weight: 600;">Começar →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Informações Confiáveis</h3>
+          <p>Conteúdo baseado em fontes oficiais do MEC, leis e organizações de saúde e educação.</p>
+          <a href="referencias.html" style="margin-top: 0.75rem; display: inline-block; font-weight: 600;">Ver fontes →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3>Orientação e Apoio</h3>
+          <p>Saiba a quem recorrer: professores, pedagogos, direção, família ou serviços de proteção.</p>
+        </article>
       </div>
-      <div class="carousel-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+    </section>
+
+    <section class="carousel-section">
+      <h2 class="section-title">Mensagens de acolhimento</h2>
+      <p class="section-subtitle">Lembre-se: você importa</p>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80" alt="Estudantes colaborando">
+            <div class="carousel-caption">Respeito e empatia transformam a escola em um lugar melhor para todos.</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="Jovens conversando">
+            <div class="carousel-caption">Pedir ajuda é um ato de coragem. Há sempre alguém pronto para ouvir.</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&q=80" alt="Apoio entre colegas">
+            <div class="carousel-caption">Juntos construímos um ambiente escolar mais seguro e acolhedor.</div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-btn next" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
-    </div>
+      <div class="carousel-dots"></div>
+    </section>
 
-    <!-- O que é bullying -->
-    <h2 class="section-title">O que é Bullying?</h2>
-    <div class="info-box">
-      <p>
-        Bullying é um comportamento agressivo, intencional e repetido, que ocorre em uma relação de desequilíbrio de poder. 
-        Pode ser físico, verbal, psicológico ou virtual (cyberbullying). Não é uma simples brincadeira: causa sofrimento real 
-        e pode deixar marcas profundas na vida de quem sofre.
+    <section style="text-align: center; margin-top: 2rem;">
+      <h2 class="section-title">Como podemos ajudar</h2>
+      <p style="max-width: 600px; margin: 0 auto 1.5rem; color: var(--text-muted);">
+        O bullying e outras formas de violência afetam a saúde emocional e o desempenho escolar.
+        Este portal oferece informações claras e caminhos de apoio, sem substituir o atendimento profissional.
       </p>
-      <ul>
-        <li><strong>Físico:</strong> empurrões, socos, chutes, destruição de pertences.</li>
-        <li><strong>Verbal:</strong> xingamentos, apelidos pejorativos, humilhações.</li>
-        <li><strong>Psicológico:</strong> exclusão, intimidação, espalhar boatos.</li>
-        <li><strong>Cyberbullying:</strong> agressões por meio de redes sociais, mensagens e internet.</li>
-      </ul>
-    </div>
-
-    <!-- Cards de ações -->
-    <h2 class="section-title">Como podemos ajudar?</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="card-icon"><i class="fas fa-ear"></i></div>
-        <h3>Portal de Escuta</h3>
-        <p>Um espaço seguro para desabafar (de forma simulada). Você receberá uma mensagem de acolhimento e orientações de ajuda.</p>
-        <a href="escuta.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.9rem;">Acessar</a>
-      </article>
-      <article class="card">
-        <div class="card-icon"><i class="fas fa-brain"></i></div>
-        <h3>Quiz Interativo</h3>
-        <p>Teste seus conhecimentos sobre bullying, respeito e como agir em situações do dia a dia escolar. Aprenda de forma divertida!</p>
-        <a href="quiz.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.9rem;">Começar</a>
-      </article>
-      <article class="card">
-        <div class="card-icon"><i class="fas fa-book-open"></i></div>
-        <h3>Fontes Confiáveis</h3>
-        <p>Conheça as referências e instituições que apoiam o combate ao bullying e a promoção de um ambiente escolar saudável.</p>
-        <a href="referencias.html" class="btn btn-primary" style="margin-top:1rem;font-size:0.9rem;">Ver fontes</a>
-      </article>
-    </div>
-
-    <!-- Mensagem final -->
-    <div class="info-box" style="border-left-color: var(--secondary); text-align:center;">
-      <h2><i class="fas fa-heart" style="color:var(--secondary);"></i> Você não está sozinho(a)</h2>
-      <p style="margin-top:0.8rem;">
-        Se você está sofrendo bullying ou conhece alguém que está, procure ajuda. 
-        Converse com um professor, pedagogo, direção da escola, familiares ou outro adulto de confiança. 
-        Existem pessoas preparadas para te acolher e ajudar.
-      </p>
-    </div>
+      <a href="escuta.html" class="btn btn-secondary">
+        <i class="fa-solid fa-hand-holding-heart"></i> Preciso de apoio agora
+      </a>
+    </section>
   </main>
 
-  <footer>
-    <p class="school-name">Colégio Estadual Visconde de Guarapuava</p>
-    <p>Portal de Apoio ao Estudante — Projeto escolar sobre combate ao bullying</p>
-    <p style="margin-top:0.5rem;font-size:0.8rem;opacity:0.7;">Este site é educativo e não substitui atendimento profissional.</p>
+  <footer class="site-footer">
+    <p>Portal de Apoio ao Estudante · Projeto escolar · Informações baseadas em fontes oficiais</p>
+    <p style="margin-top: 0.5rem;">
+      Em caso de emergência, ligue <strong>190</strong> (Polícia) ou <strong>100</strong> (Direitos Humanos).
+      CVV – Centro de Valorização da Vida: <strong>188</strong> (24h).
+    </p>
   </footer>
 
-  <button id="backToTop" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
-
-  <script src="js/script.js"></script>
+  <button id="backToTop" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="js/main.js"></script>
 </body>
 </html>
