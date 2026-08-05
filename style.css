@@ -172,7 +172,6 @@ header {
   padding: 140px 20px 100px 20px;
   text-align: center;
   position: relative;
-  /* Utiliza a foto enviada (visocnde.jpg) com camada escura sobreposta para leitura clara */
   background: linear-gradient(
       rgba(13, 17, 23, 0.85), 
       rgba(13, 17, 23, 0.92)
@@ -533,4 +532,64 @@ footer {
   .flashcard-wrapper { height: 220px; }
   .header-container { flex-direction: column; gap: 15px; }
   .hero-section h1 { font-size: 2rem; }
+}
+
+/* ===================================================
+   ANIMAÇÕES & EFEITOS DINÂMICOS (@keyframes)
+   =================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent-cyan);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--accent-glow);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Aplicação das Animações */
+.hero-content h1,
+.hero-content p,
+.section-title {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.badge {
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+.section-title i,
+.card-icon i {
+  display: inline-block;
+  animation: float 4s ease-in-out infinite;
+}
+
+.btn-tech.primary {
+  animation: glowPulse 2.5s infinite;
 }
