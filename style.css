@@ -172,11 +172,16 @@ header {
   padding: 140px 20px 100px 20px;
   text-align: center;
   position: relative;
-  background: linear-gradient(
+  /* Fundo escuro garantido caso a imagem não carregue + Imagem da Escola */
+  background-color: var(--bg-main);
+  background-image: linear-gradient(
       rgba(13, 17, 23, 0.85), 
       rgba(13, 17, 23, 0.92)
     ), 
-    url('visocnde.jpg') center/cover no-repeat;
+    url('./visocnde.jpg'); /* Se estiver na pasta raiz */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border-color);
 }
 
