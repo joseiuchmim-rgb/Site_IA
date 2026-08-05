@@ -167,11 +167,18 @@ header {
   color: #000;
 }
 
-/* Hero Section */
+/* Hero Section com Imagem Temática de Conscientização */
 .hero-section {
-  padding: 120px 20px 80px 20px;
+  padding: 140px 20px 100px 20px;
   text-align: center;
   position: relative;
+  /* Imagem de conscientização (apoio/união entre jovens) com overlay escuro para leitura clara */
+  background: linear-gradient(
+      rgba(13, 17, 23, 0.88), 
+      rgba(13, 17, 23, 0.95)
+    ), 
+    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .hero-content {
